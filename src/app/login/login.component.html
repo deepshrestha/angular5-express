@@ -1,0 +1,16 @@
+<div class="container-fluid">
+	<div class="well">
+		<form #loginForm="ngForm" (ngSubmit)="doLogin(loginForm.value)">
+		  <div class="form-group">
+		    <label for="username">Username</label>
+		    <input type="text" #userText required name="username" class="form-control" ngModel>
+				<div>{{userText.className}}</div>
+			</div>
+		  <div class="form-group">
+		    <label for="password">Password</label>
+		    <input type="password" name="password" class="form-control" ngModel>
+		  </div>
+		  <button type="submit" [disabled]="loginForm.valid" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+</div>
