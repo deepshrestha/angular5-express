@@ -10,7 +10,7 @@
 		    <label for="password">Password</label>
 		    <input type="password" name="password" class="form-control" ngModel>
 		  </div>
-		  <button type="submit" [disabled]="loginForm.valid" class="btn btn-primary">Submit</button>
+		  <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Submit</button>
 		</form>
 	</div>
 </div>
